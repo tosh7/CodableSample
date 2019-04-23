@@ -8,25 +8,12 @@
 
 import Foundation
 
-struct Article {
+struct Article: Codable {
     
-    var title = ""
-    var userId = ""
+    var title: String
+    var user: User
     
-}
-
-extension Article {
-    
-    init(_ json: [String: Any]) {
-        
-        if let title = json["title"] as? String {
-            self.title = title
-        }
-        
-        if let user = json["user"] as? [String: Any] {
-            if let userId = user["id"] as? String {
-                self.userId = userId
-            }
-        }
+    struct User: Codable {
+        var id: String
     }
 }

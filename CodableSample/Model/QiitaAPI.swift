@@ -23,10 +23,7 @@ final class QiitaAPI: APIModel {
             guard let jsonData = data else { return }
             
             do {
-                let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
-                
-                guard let jsonArray = jsonObject as? [Any] else { return }
-                let articles = jsonArray.flatMap{$0 as? [String: Any]}.map{Article($0)}
+                let articles = try JSONDecoder().decode([Article].self, from: jsonData)
                 completion(articles)
             } catch {
                 print(error.localizedDescription)

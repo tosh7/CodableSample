@@ -24,7 +24,9 @@ final class ViewController: UIViewController {
         
         QiitaAPI.fetchArticle(completion:{ articles in
             self.articles = articles
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         })
     }
 }
@@ -38,7 +40,7 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TableViewCell
         
         cell.titleLabel.text = articles[indexPath.row].title
-        cell.nameLabel.text = articles[indexPath.row].userId
+        cell.nameLabel.text = articles[indexPath.row].user.id
         
         return cell
     }
