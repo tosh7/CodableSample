@@ -13,6 +13,9 @@
 		2B317153226AE2EB00EA2986 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B317152226AE2EB00EA2986 /* Assets.xcassets */; };
 		2B317156226AE2EB00EA2986 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B317154226AE2EB00EA2986 /* LaunchScreen.storyboard */; };
 		2BB57196226C856F0012E092 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB57195226C856F0012E092 /* Article.swift */; };
+		2BF25884226CD80C0092BE97 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF25883226CD80C0092BE97 /* TableViewCell.swift */; };
+		2BF25886226CDC6A0092BE97 /* QiitaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF25885226CDC6A0092BE97 /* QiitaAPI.swift */; };
+		2BF25888226CDCE90092BE97 /* APIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF25887226CDCE90092BE97 /* APIModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		2B317155226AE2EB00EA2986 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B317157226AE2EB00EA2986 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BB57195226C856F0012E092 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		2BF25883226CD80C0092BE97 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		2BF25885226CDC6A0092BE97 /* QiitaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPI.swift; sourceTree = "<group>"; };
+		2BF25887226CDCE90092BE97 /* APIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +63,49 @@
 			isa = PBXGroup;
 			children = (
 				2B31714B226AE2EA00EA2986 /* AppDelegate.swift */,
-				2B31714D226AE2EA00EA2986 /* ViewController.swift */,
 				2B31714F226AE2EA00EA2986 /* Main.storyboard */,
-				2BB57195226C856F0012E092 /* Article.swift */,
 				2B317152226AE2EB00EA2986 /* Assets.xcassets */,
 				2B317154226AE2EB00EA2986 /* LaunchScreen.storyboard */,
 				2B317157226AE2EB00EA2986 /* Info.plist */,
+				2BF2588C226CDEFA0092BE97 /* Cell */,
+				2BF2588B226CDEE30092BE97 /* Protcol */,
+				2BF2588A226CDED90092BE97 /* ViewController */,
+				2BF25889226CDED20092BE97 /* Model */,
 			);
 			path = CodableSample;
+			sourceTree = "<group>";
+		};
+		2BF25889226CDED20092BE97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BF25885226CDC6A0092BE97 /* QiitaAPI.swift */,
+				2BB57195226C856F0012E092 /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BF2588A226CDED90092BE97 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2B31714D226AE2EA00EA2986 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2BF2588B226CDEE30092BE97 /* Protcol */ = {
+			isa = PBXGroup;
+			children = (
+				2BF25887226CDCE90092BE97 /* APIModel.swift */,
+			);
+			path = Protcol;
+			sourceTree = "<group>";
+		};
+		2BF2588C226CDEFA0092BE97 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2BF25883226CD80C0092BE97 /* TableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BF25886226CDC6A0092BE97 /* QiitaAPI.swift in Sources */,
 				2B31714E226AE2EA00EA2986 /* ViewController.swift in Sources */,
+				2BF25884226CD80C0092BE97 /* TableViewCell.swift in Sources */,
 				2B31714C226AE2EA00EA2986 /* AppDelegate.swift in Sources */,
+				2BF25888226CDCE90092BE97 /* APIModel.swift in Sources */,
 				2BB57196226C856F0012E092 /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
