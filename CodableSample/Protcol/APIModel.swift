@@ -10,7 +10,7 @@ import Foundation
 
 protocol APIModel {
     
-    var url : String { set get }
+    static var url : String { set get }
     
-    func fetchArticle(completion: @escaping (([Article]) -> Void))
+    static func fetchArticle(completion: @escaping (([Article]) -> Void))
 }
